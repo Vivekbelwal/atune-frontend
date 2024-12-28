@@ -1,0 +1,12 @@
+.task-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-name {
+    display:flex;
+}
+
+.task-description {
+    display: flex;
+}
