@@ -1,17 +1,19 @@
-import { TaskBoard, TaskCard } from "../../Components";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.accessToken) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
   return (
     <>
-      <div className="page">
-        <div className="task-section">
-          <TaskCard />
-        </div>
-        <div className="board-section">
-          <TaskBoard />
-        </div>
-      </div>
+      <div>Home</div>
     </>
   );
 }

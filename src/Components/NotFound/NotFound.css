@@ -1,0 +1,21 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.not-found-container .ant-result {
+  text-align: center;
+}
+
+.not-found-container .ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.not-found-container .ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
