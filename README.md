@@ -4,12 +4,13 @@ A highly scalable React application with modern architecture.
 
 ## Features
 
-- **Modern Stack**: Built with React 19, Redux Toolkit, TypeScript, and Tailwind CSS
+- **Modern Stack**: Built with React 19, Redux Toolkit, TypeScript, and Ant Design
+- **Node.js 22 Compatible**: Optimized for the latest Node.js features and performance
 - **Scalable Architecture**: Organized with a scalable folder structure and modular components
 - **State Management**: Redux Toolkit with RTK Query for efficient state management and API integration
 - **Routing**: React Router v7 for declarative routing
 - **Type Safety**: TypeScript for type checking and better developer experience
-- **Styling**: Tailwind CSS for utility-first styling
+- **Styling**: Ant Design for consistent UI components and Tailwind CSS for utility styling
 - **Code Quality**: ESLint and Prettier for code linting and formatting
 - **Authentication**: JWT-based authentication with protected routes
 - **Responsive Design**: Mobile-first approach for all screen sizes
@@ -43,8 +44,25 @@ src/
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm or yarn
+- Node.js (v22 or higher)
+- npm (v10 or higher) or yarn
+
+### Node.js Version Management
+
+This project includes configuration files for Node.js version managers:
+
+- `.nvmrc` for nvm users
+- `.node-version` for nodenv users
+
+To use the correct Node.js version:
+
+```bash
+# For nvm users
+nvm use
+
+# For nodenv users
+nodenv local
+```
 
 ### Installation
 
@@ -87,6 +105,16 @@ Create a `.env` file in the root directory with the following variables:
 ```
 VITE_API_URL=https://api.example.com
 ```
+
+## Node.js 22 Optimizations
+
+This project is optimized for Node.js 22 with:
+
+- ESM modules throughout the codebase
+- Modern JavaScript features (top-level await, optional chaining, nullish coalescing)
+- Enhanced performance with optimized build configurations
+- TypeScript configured for the latest ECMAScript features
+- Vite build optimizations for modern browsers
 
 ## Deployment
 
