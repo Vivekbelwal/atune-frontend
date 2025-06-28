@@ -4,10 +4,10 @@
       font-family: 'Segoe UI', sans-serif;
       font-weight: 600;
       font-size: 36px;
-      fill: #2C3E50;
+      fill: #ffffff;
     }
     .accent {
-      fill: #1ABC9C;
+      fill: #67E8F9;
     }
   </style>
   <text x="10" y="42" class="atune-text">
