@@ -10,11 +10,14 @@ import {
   FileTextOutlined,
 } from "@ant-design/icons";
 import logo from "/logo.svg"; // Using the SVG logo from public folder
+import Profile from "../../Components/Profile";
+import { useUser } from "../../contexts/UserContext";
 
 const { Header, Sider, Content } = Layout;
 
 function Home() {
   const navigate = useNavigate();
+  const { clearUser } = useUser();
   const [collapsed, setCollapsed] = useState(false);
   const [selectedKey, setSelectedKey] = useState("1");
 
@@ -26,6 +29,8 @@ function Home() {
 
   // Handle logout functionality
   const handleLogout = () => {
+    // Clear user context
+    clearUser();
     // Clear all localStorage data
     localStorage.clear();
     // Reload the page
@@ -60,11 +65,7 @@ function Home() {
   const renderContent = () => {
     switch (selectedKey) {
       case "1":
-        return (
-          <div style={{ padding: "24px", minHeight: "360px" }}>
-            <h2>My Profile Page</h2>
-          </div>
-        );
+        return <Profile />;
       case "2":
         return (
           <div style={{ padding: "24px", minHeight: "360px" }}>

@@ -1,0 +1,188 @@
+.user-edit-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.avatar-form-item {
+  text-align: center;
+}
+
+.avatar-upload-container {
+  width: 100%;
+  padding: 16px;
+  border: 1px dashed #d9d9d9;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.avatar-upload-container:hover {
+  border-color: #1890ff;
+  background-color: #f0f8ff;
+}
+
+.avatar-preview {
+  margin-bottom: 12px;
+  border: 2px solid #d9d9d9;
+  background-color: #fff;
+}
+
+.avatar-upload-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.avatar-upload-button:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+/* Form item spacing */
+.user-edit-form .ant-form-item {
+  margin-bottom: 20px;
+}
+
+.user-edit-form .ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Label styling */
+.user-edit-form .ant-form-item-label > label {
+  font-weight: 600;
+  color: #262626;
+  font-size: 14px;
+}
+
+/* Input styling */
+.user-edit-form .ant-input {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.user-edit-form .ant-input:hover {
+  border-color: #40a9ff;
+}
+
+.user-edit-form .ant-input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Disabled input styling */
+.user-edit-form .ant-input:disabled {
+  background-color: #f5f5f5;
+  color: #8c8c8c;
+  cursor: not-allowed;
+}
+
+/* Upload component styling */
+.user-edit-form .ant-upload {
+  display: block;
+}
+
+.user-edit-form .ant-upload-list {
+  display: none;
+}
+
+/* Error styling */
+.user-edit-form .ant-form-item-has-error .ant-input {
+  border-color: #ff4d4f;
+}
+
+.user-edit-form .ant-form-item-explain-error {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Success styling */
+.user-edit-form .ant-form-item-has-success .ant-input {
+  border-color: #52c41a;
+}
+
+/* Helper text styling */
+.user-edit-form .ant-typography {
+  margin-top: 4px;
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .user-edit-form {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  
+  .avatar-upload-container {
+    padding: 12px;
+  }
+  
+  .avatar-preview {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-edit-form .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .avatar-upload-container {
+    padding: 8px;
+  }
+  
+  .avatar-upload-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Loading state */
+.user-edit-form .ant-btn-loading {
+  pointer-events: none;
+}
+
+/* Card styling when used with Form component */
+.user-edit-form.form-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Space component adjustments */
+.avatar-upload-container .ant-space {
+  width: 100%;
+}
+
+.avatar-upload-container .ant-space-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Upload button icon */
+.avatar-upload-button .anticon {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+/* Form validation styling */
+.user-edit-form .ant-form-item-required::before {
+  color: #ff4d4f;
+}
+
+/* Avatar border on hover */
+.avatar-preview:hover {
+  border-color: #1890ff;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}

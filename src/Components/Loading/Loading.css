@@ -1,0 +1,122 @@
+.loading-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.loading-text {
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.loading-inline {
+  width: 100%;
+  padding: 16px;
+}
+
+/* Custom loading spinner styles */
+.ant-spin-dot {
+  font-size: 20px;
+}
+
+.ant-spin-lg .ant-spin-dot {
+  font-size: 32px;
+}
+
+.ant-spin-sm .ant-spin-dot {
+  font-size: 14px;
+}
+
+/* Loading text responsive */
+@media (max-width: 576px) {
+  .loading-text {
+    font-size: 12px;
+  }
+  
+  .loading-container {
+    padding: 16px;
+  }
+  
+  .loading-inline {
+    padding: 12px;
+  }
+}
+
+/* Center alignment for loading content */
+.loading-container .ant-col {
+  text-align: center;
+}
+
+/* Spacing adjustments */
+.ant-space-vertical.ant-space-align-center {
+  width: 100%;
+}
+
+/* Loading overlay styles when used with children */
+.ant-spin-container {
+  position: relative;
+}
+
+.ant-spin-blur {
+  opacity: 0.5;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Custom tip styling */
+.ant-spin-tip {
+  color: #8c8c8c;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Loading states for different contexts */
+.loading-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.loading-card {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-page {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animation enhancements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-container,
+.loading-inline {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .loading-text {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  
+  .ant-spin-tip {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}

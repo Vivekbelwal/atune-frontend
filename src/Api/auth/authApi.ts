@@ -26,7 +26,10 @@ export const Login = async (data: LoginRequest): Promise<LoginResponse> => {
     email: data.email,
     password: data.password,
   };
-  const response = await httpClient.post("/graphql", { query, variables });
+  const response = await httpClient.post("/graphql", {
+    query,
+    variables,
+  });
   return handleGraphqlResponse(response.data);
 };
 
@@ -50,6 +53,9 @@ export const SignUp = async (data: SignUpRequest): Promise<SignUpResponse> => {
     email: data.email,
     password: data.password,
   };
-  const response = await httpClient.post("/graphql", { query, variables });
+  const response = await httpClient.post("/graphql", {
+    query,
+    variables,
+  });
   return handleGraphqlResponse(response.data);
 };
