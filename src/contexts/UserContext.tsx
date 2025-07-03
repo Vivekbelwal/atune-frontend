@@ -48,9 +48,11 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     } catch (err: any) {
       console.error("Error fetching user:", err);
       setError(err.message || "Failed to fetch user data");
-      // If token is invalid, clear it
+      // If token is invalid, clear user data and let httpClient handle logout
       if (err.response?.status === 401) {
-        localStorage.removeItem("accessToken");
+        setUser(null);
+        setError("Session expired");
+        // httpClient interceptor will handle the logout automatically
       }
     } finally {
       setLoading(false);
